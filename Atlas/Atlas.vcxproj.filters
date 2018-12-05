@@ -4,6 +4,9 @@
     <Filter Include="Atlas">
       <UniqueIdentifier>{3AADD80C-A6C1-00BE-6F43-A41DDB16FDEE}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Atlas\Events">
+      <UniqueIdentifier>{DEF313F9-CA56-A39D-73DC-DB535F1E6F20}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Atlas.h" />
@@ -18,6 +21,18 @@
     </ClInclude>
     <ClInclude Include="src\Atlas\ErrorLog.h">
       <Filter>Atlas</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Atlas\Events\ApplicationEvents.h">
+      <Filter>Atlas\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Atlas\Events\Event.h">
+      <Filter>Atlas\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Atlas\Events\KeyEvent.h">
+      <Filter>Atlas\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Atlas\Events\MouseEvents.h">
+      <Filter>Atlas\Events</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

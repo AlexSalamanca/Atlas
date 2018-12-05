@@ -9,3 +9,5 @@
 #else
 	#error Atlas only support Windows
 #endif // AT_PLATFORM_WINDOWS
+
+#define BIT(x) (1 << x)
