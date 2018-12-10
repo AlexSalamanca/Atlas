@@ -17,6 +17,9 @@ project "Atlas"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "atpch.h"
+	pchsource "Atlas/src/atpch.cpp"
+
 	files
 	{
 		"%{prj.name}/src/**.h",
@@ -24,7 +27,7 @@ project "Atlas"
 	}
 
 	includedirs{
-		"{prj.name}/src",
+		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include"
 	}
 

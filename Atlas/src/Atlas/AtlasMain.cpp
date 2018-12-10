@@ -1,3 +1,5 @@
+#include "atpch.h"
+
 #include "AtlasMain.h"
 
 #include "Events/ApplicationEvents.h"
@@ -17,11 +19,11 @@ namespace Atlas {
 	{
 		WindowsResizeEvent e(1280, 720);
 		if (e.IsInCategory(EventCategoryApplication)) {
-			AT_TRACE(e);
+			AT_INFO(e);
 		}
 
 		if (e.IsInCategory(EventCategoryInput)) {
-			AT_TRACE(e);
+			AT_INFO(e);
 		}
 
 		while (true);

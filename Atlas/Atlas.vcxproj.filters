@@ -34,6 +34,7 @@
     <ClInclude Include="src\Atlas\Events\MouseEvents.h">
       <Filter>Atlas\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\atpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Atlas\AtlasMain.cpp">
@@ -42,5 +43,6 @@
     <ClCompile Include="src\Atlas\ErrorLog.cpp">
       <Filter>Atlas</Filter>
     </ClCompile>
+    <ClCompile Include="src\atpch.cpp" />
   </ItemGroup>
 </Project>

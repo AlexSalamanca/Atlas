@@ -1,3 +1,5 @@
+#include "atpch.h"
+
 #include "ErrorLog.h"
 
 namespace Atlas {
