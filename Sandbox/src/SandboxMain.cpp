@@ -1,6 +1,5 @@
 #include "atpch.h"
-
-#include <Atlas.h>
+#include "Atlas.h"
 
 class Sandbox : public Atlas::main
 {

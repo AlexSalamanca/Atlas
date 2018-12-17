@@ -7,6 +7,12 @@
     <Filter Include="Atlas\Events">
       <UniqueIdentifier>{DEF313F9-CA56-A39D-73DC-DB535F1E6F20}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Atlas\Platform">
+      <UniqueIdentifier>{CE6AFEA9-BA38-F2AF-A3CC-62D68F39CE14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Atlas\Platform\Windows">
+      <UniqueIdentifier>{0803F990-F4FC-21E3-DD69-B8F3C902884F}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Atlas.h" />
@@ -34,6 +40,12 @@
     <ClInclude Include="src\Atlas\Events\MouseEvents.h">
       <Filter>Atlas\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Atlas\Platform\Windows\WindowsWindow.h">
+      <Filter>Atlas\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Atlas\Window.h">
+      <Filter>Atlas</Filter>
+    </ClInclude>
     <ClInclude Include="src\atpch.h" />
   </ItemGroup>
   <ItemGroup>
@@ -42,6 +54,9 @@
     </ClCompile>
     <ClCompile Include="src\Atlas\ErrorLog.cpp">
       <Filter>Atlas</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Atlas\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Atlas\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\atpch.cpp" />
   </ItemGroup>
