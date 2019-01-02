@@ -59,14 +59,17 @@ project "Atlas"
 
 	filter "configurations:Debug"
 		defines "AT_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "AT_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "AT_DIST"
+		buildoptions "/MD"
 		optimize "On"
 
 project "Sandbox"

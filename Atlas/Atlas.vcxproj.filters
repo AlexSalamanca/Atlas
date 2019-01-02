@@ -40,10 +40,16 @@
     <ClInclude Include="src\Atlas\Events\MouseEvents.h">
       <Filter>Atlas\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Atlas\LayerStack.h">
+      <Filter>Atlas</Filter>
+    </ClInclude>
     <ClInclude Include="src\Atlas\Platform\Windows\WindowsWindow.h">
       <Filter>Atlas\Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\Atlas\Window.h">
+      <Filter>Atlas</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Atlas\layer.h">
       <Filter>Atlas</Filter>
     </ClInclude>
     <ClInclude Include="src\atpch.h" />
@@ -55,8 +61,14 @@
     <ClCompile Include="src\Atlas\ErrorLog.cpp">
       <Filter>Atlas</Filter>
     </ClCompile>
+    <ClCompile Include="src\Atlas\LayerStack.cpp">
+      <Filter>Atlas</Filter>
+    </ClCompile>
     <ClCompile Include="src\Atlas\Platform\Windows\WindowsWindow.cpp">
       <Filter>Atlas\Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Atlas\layer.cpp">
+      <Filter>Atlas</Filter>
     </ClCompile>
     <ClCompile Include="src\atpch.cpp" />
   </ItemGroup>

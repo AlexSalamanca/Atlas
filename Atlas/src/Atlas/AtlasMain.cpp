@@ -1,7 +1,6 @@
 #include "atpch.h"
 
 #include "AtlasMain.h"
-
 #include "ErrorLog.h"
 
 #include "GLFW/glfw3.h"
@@ -18,11 +17,23 @@ namespace Atlas {
 	{
 	}
 
+	void main::PushLayer(Layer* layer) {
+		m_LayerStack.PushLayer(layer);
+	}
+
+	void main::PushOverlay(Layer* overlay) {
+		m_LayerStack.PopOverlay(overlay);
+	}
+
 	void main::Run()
 	{
 		while (m_Run) {
 			glClearColor(0.8, 0.4, 0.6, 1);
 			glClear(GL_COLOR_BUFFER_BIT);
+
+			for (Layer* layer : m_LayerStack)
+				layer->OnUpdate();
+
 			m_Window->OnUpdate();
 		}
 	}
@@ -32,7 +43,11 @@ namespace Atlas {
 		EventDispatcher dispatcher(e);
 		dispatcher.Dispatch<WindowsCloseEvent>(BIND_EVENT_FN(main::OnWindowClose));
 
-		AT_CORE_TRACE("{0}", e);
+		for (auto it = m_LayerStack.end(); it != m_LayerStack.begin();) {
+			(*--it)->OnEvent(e);
+			if (e.m_Handled)
+				break;
+		}
 	}
 
 	bool main::OnWindowClose(WindowsCloseEvent& e)
