@@ -1,5 +1,7 @@
 #include "atpch.h"
 
+#include "glad/glad.h"
+
 #include "WindowsWindow.h"
 #include "Atlas/Events/ApplicationEvents.h"
 #include "Atlas/Events/MouseEvents.h"
@@ -63,6 +65,8 @@ namespace Atlas {
 
 		m_Window = glfwCreateWindow((int)props.width, (int)props.height, m_Data.title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_Window);
+		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		AT_CORE_ASSERT(status, "Failed to initialize glad");
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
 
