@@ -21,7 +21,10 @@ namespace Atlas {
 		void OnEvent(Event& e);
 
 		void PushLayer(Layer* layer);
-		void PushOverlay(Layer* overlay);
+		void PushOverlay(Layer* layer);
+
+		inline Window& GetWindow() { return *m_Window; }
+		inline static main& Get() { return *s_Instance; }
 
 	private:
 		bool OnWindowClose(WindowsCloseEvent& e);
@@ -30,6 +33,8 @@ namespace Atlas {
 		bool m_Run = true;
 
 		LayerStack m_LayerStack;
+
+		static main* s_Instance;
 	};
 
 	//to be defined in CLIENT

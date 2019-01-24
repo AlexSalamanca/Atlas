@@ -7,8 +7,14 @@
     <Filter Include="Atlas\Events">
       <UniqueIdentifier>{DEF313F9-CA56-A39D-73DC-DB535F1E6F20}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Atlas\ImGui">
+      <UniqueIdentifier>{E4A5A04D-505B-1943-D94F-131A45041047}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Atlas\Platform">
       <UniqueIdentifier>{CE6AFEA9-BA38-F2AF-A3CC-62D68F39CE14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Atlas\Platform\ImGui">
+      <UniqueIdentifier>{78420BB2-64D1-947B-0DF0-A876F95DA521}</UniqueIdentifier>
     </Filter>
     <Filter Include="Atlas\Platform\Windows">
       <UniqueIdentifier>{0803F990-F4FC-21E3-DD69-B8F3C902884F}</UniqueIdentifier>
@@ -40,8 +46,14 @@
     <ClInclude Include="src\Atlas\Events\MouseEvents.h">
       <Filter>Atlas\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Atlas\ImGui\ImGuiLayer.h">
+      <Filter>Atlas\ImGui</Filter>
+    </ClInclude>
     <ClInclude Include="src\Atlas\LayerStack.h">
       <Filter>Atlas</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Atlas\Platform\ImGui\ImGuiOpenGLRenderer.h">
+      <Filter>Atlas\Platform\ImGui</Filter>
     </ClInclude>
     <ClInclude Include="src\Atlas\Platform\Windows\WindowsWindow.h">
       <Filter>Atlas\Platform\Windows</Filter>
@@ -61,8 +73,14 @@
     <ClCompile Include="src\Atlas\ErrorLog.cpp">
       <Filter>Atlas</Filter>
     </ClCompile>
+    <ClCompile Include="src\Atlas\ImGui\ImGuiLayer.cpp">
+      <Filter>Atlas\ImGui</Filter>
+    </ClCompile>
     <ClCompile Include="src\Atlas\LayerStack.cpp">
       <Filter>Atlas</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Atlas\Platform\ImGui\ImGuiOpenGLRenderer.cpp">
+      <Filter>Atlas\Platform\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="src\Atlas\Platform\Windows\WindowsWindow.cpp">
       <Filter>Atlas\Platform\Windows</Filter>

@@ -6,8 +6,13 @@
 #include "glad/glad.h"
 
 namespace Atlas {
+	main* main::s_Instance = nullptr;
+
 	main::main()
 	{
+		AT_CORE_ASSERT(!s_Instance, "Application already exists!");
+		s_Instance = this;
+
 		m_Window = std::unique_ptr<Window>(Window::Create());
 		m_Window->SetEventCallback(BIND_EVENT_FN(main::OnEvent));
 	}
@@ -19,10 +24,12 @@ namespace Atlas {
 
 	void main::PushLayer(Layer* layer) {
 		m_LayerStack.PushLayer(layer);
+		layer->OnAttach();
 	}
 
-	void main::PushOverlay(Layer* overlay) {
-		m_LayerStack.PopOverlay(overlay);
+	void main::PushOverlay(Layer* layer) {
+		m_LayerStack.PushOverlay(layer);
+		layer->OnAttach();
 	}
 
 	void main::Run()
