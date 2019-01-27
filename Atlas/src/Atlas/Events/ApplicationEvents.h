@@ -3,9 +3,9 @@
 #include "Event.h"
 
 namespace Atlas {
-	class ATLAS_API WindowsResizeEvent : public Event {
+	class ATLAS_API WindowResizedEvent : public Event {
 	public:
-		WindowsResizeEvent(unsigned int width, unsigned int height)
+		WindowResizedEvent(unsigned int width, unsigned int height)
 			: m_Width(width), m_Height(height) {}
 
 		inline unsigned int GetWidth() const { return m_Width; }
@@ -13,7 +13,7 @@ namespace Atlas {
 
 		std::string ToString() const override {
 			std::stringstream ss;
-			ss << "WindowsResizeEvent: " << m_Width << ", " << m_Height;
+			ss << "WindowResizedEvent: " << m_Width << ", " << m_Height;
 			return ss.str();
 		}
 
@@ -24,9 +24,9 @@ namespace Atlas {
 		unsigned int m_Width, m_Height;
 	};
 
-	class ATLAS_API WindowsCloseEvent : public Event {
+	class ATLAS_API WindowCloseEvent : public Event {
 	public:
-		WindowsCloseEvent() {}
+		WindowCloseEvent() {}
 
 		EVENT_CLASS_TYPE(WindowClose)
 		EVENT_CLASS_CATEGORY(EventCategoryApplication)

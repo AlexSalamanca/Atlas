@@ -27,7 +27,7 @@ namespace Atlas {
 		inline static main& Get() { return *s_Instance; }
 
 	private:
-		bool OnWindowClose(WindowsCloseEvent& e);
+		bool OnWindowClose(WindowCloseEvent& e);
 
 		std::unique_ptr<Window> m_Window;
 		bool m_Run = true;

@@ -48,7 +48,7 @@ namespace Atlas {
 	void main::OnEvent(Event & e)
 	{
 		EventDispatcher dispatcher(e);
-		dispatcher.Dispatch<WindowsCloseEvent>(BIND_EVENT_FN(main::OnWindowClose));
+		dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(main::OnWindowClose));
 
 		for (auto it = m_LayerStack.end(); it != m_LayerStack.begin();) {
 			(*--it)->OnEvent(e);
@@ -57,7 +57,7 @@ namespace Atlas {
 		}
 	}
 
-	bool main::OnWindowClose(WindowsCloseEvent& e)
+	bool main::OnWindowClose(WindowCloseEvent& e)
 	{
 		m_Run = false;
 

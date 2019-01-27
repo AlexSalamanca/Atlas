@@ -72,14 +72,14 @@ namespace Atlas {
 		EVENT_CLASS_TYPE(MouseButtonPressed)
 	};
 
-	class ATLAS_API MouseButtoneReleasedEvent : public MouseButtonEvent {
+	class ATLAS_API MouseButtonReleasedEvent : public MouseButtonEvent {
 	public:
-		MouseButtoneReleasedEvent(int button)
+		MouseButtonReleasedEvent(int button)
 			: MouseButtonEvent(button) {}
 
 		std::string ToString() const override {
 			std::stringstream ss;
-			ss << "MouseButtoneReleasedEvent: " << m_Button;
+			ss << "MouseButtonReleasedEvent: " << m_Button;
 			return ss.str();
 		}
 
