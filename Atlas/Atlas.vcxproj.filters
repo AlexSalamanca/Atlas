@@ -49,11 +49,23 @@
     <ClInclude Include="src\Atlas\ImGui\ImGuiLayer.h">
       <Filter>Atlas\ImGui</Filter>
     </ClInclude>
+    <ClInclude Include="src\Atlas\Input.h">
+      <Filter>Atlas</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Atlas\KeyCodes.h">
+      <Filter>Atlas</Filter>
+    </ClInclude>
     <ClInclude Include="src\Atlas\LayerStack.h">
+      <Filter>Atlas</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Atlas\MouseButtonCodes.h">
       <Filter>Atlas</Filter>
     </ClInclude>
     <ClInclude Include="src\Atlas\Platform\ImGui\ImGuiOpenGLRenderer.h">
       <Filter>Atlas\Platform\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Atlas\Platform\Windows\WindowsInput.h">
+      <Filter>Atlas\Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\Atlas\Platform\Windows\WindowsWindow.h">
       <Filter>Atlas\Platform\Windows</Filter>
@@ -81,6 +93,9 @@
     </ClCompile>
     <ClCompile Include="src\Atlas\Platform\ImGui\ImGuiOpenGLRenderer.cpp">
       <Filter>Atlas\Platform\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Atlas\Platform\Windows\WindowsInput.cpp">
+      <Filter>Atlas\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\Atlas\Platform\Windows\WindowsWindow.cpp">
       <Filter>Atlas\Platform\Windows</Filter>

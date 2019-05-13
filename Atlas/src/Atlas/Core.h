@@ -10,6 +10,10 @@
 	#error Atlas only support Windows
 #endif // AT_PLATFORM_WINDOWS
 
+#ifdef AT_DEBUG
+	#define AT_ENABLE_ASSETS
+#endif
+
 #ifdef AT_ENABLE_ASSERTS	
 	#define AT_ASSERT(x, ...) { if(!(x)) { AT_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } } 
 	#define AT_CORE_ASSERT(x, ...) { if(!(x)) { AT_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } } 

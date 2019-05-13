@@ -10,10 +10,11 @@ public:
 
 	void OnUpdate() override {
 		AT_INFO("ExampleLayer::Update");
+		if (Atlas::Input::IsKeyPressed(AT_KEY_TAB)) AT_INFO("Tab key is pressed");
 	}
 
 	void OnEvent(Atlas::Event& event) override{
-		AT_TRACE("{0}", event);
+		//AT_TRACE("{0}", event);
 	}
 };
 
